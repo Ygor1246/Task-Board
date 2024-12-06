@@ -1,0 +1,130 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #095b5e, #a49a08);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5f0841;
+  overflow: hidden;
+}
+
+.login-container {
+  background: rgba(98, 11, 157, 0.85);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(167, 92, 92, 0.5);
+  width: 100%;
+  max-width: 400px;
+  animation: scaleIn 0.8s ease-in-out;
+  position: relative;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(135deg, #b6dc2d, #00ff44);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.login-container h1 {
+  font-size: 34px;
+  color: #dac9dc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#login-form label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#login-form input {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(60deg, #2662a2,#000000);
+  font-size: 16px;
+  color: #bc4016;
+  transition: all 0.3s ease-in-out;
+}
+
+#login-form input:focus {
+  outline: none;
+  background: #4dc312;
+  box-shadow: 0 0 10px rgba(25, 110, 152, 0.7);
+}
+
+#login-form button {
+  padding: 15px;
+  background: linear-gradient(90deg, #c3f00f, #1009d5);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d5d5d5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+#login-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(64, 68, 142, 0.5);
+}
+
+#error-message {
+  color: #07446a;
+  text-align: center;
+  font-size: 14px;
+  display: none;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #76ec00;
+}
+
+footer a {
+  color: #0b6106;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animação */
+@keyframes scaleItes {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
